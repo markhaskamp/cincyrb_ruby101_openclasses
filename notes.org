@@ -5,10 +5,11 @@
    
 ** Examples
 *** 2 classes with the same name
-*** modules
-*** include in an if statement
-*** patching stl/core classes
 *** load order
+*** patching stl/core classes
+*** modules
+**** for example, to 'enhance' core class
+*** include in an if statement
 *** best practices
 *** in the wild
     on my linux box:
