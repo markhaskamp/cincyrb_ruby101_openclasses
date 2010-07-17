@@ -1,0 +1,21 @@
+
+## Notes ##
+### Examples ###
+* 2 classes with the same name
+* modules
+* include in an if statement
+* patching stl/core classes
+* load order
+* best practices
+* in the wild
+** rails
+     activesupport/lib/active_support/core_ext/numeric/time.rb
+     activesupport/lib/active_support/core_ext
+
+** rake
+     lib/rake/ext/
+
+### Links ###
+[Ruby and Open Classes](http://blog.aizatto.com/2007/06/01/ruby-and-open-classes/)
+
+
