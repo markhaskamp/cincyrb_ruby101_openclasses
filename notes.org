@@ -5,12 +5,17 @@
    
 ** Examples
 *** 2 classes with the same name
+**** Foo.bar, Foo.baz
+**** open Foo, redefine Foo.bar
 *** load order
+**** test for Foo.bar
+**** open Foo, redefine Foo.bar
 *** patching stl/core classes
+**** seconds, minutes, ago
 *** modules
-**** for example, to 'enhance' core class
-*** include in an if statement
+**** include and include in an if statement
 *** best practices
+**** you tell me
 *** in the wild
     on my linux box:
 
@@ -21,6 +26,7 @@
      ~/.rvm/gems/ruby-1.9.1-p378/gems/rake-0.8.7/lib/rake.rb
 
 ** Links
-   Ruby and Open Classes, http://blog.aizatto.com/2007/06/01/ruby-and-open-classes/
+*** http://github.com/markhaskamp/cincyrb_ruby101_openclasses
+*** Ruby and Open Classes, http://blog.aizatto.com/2007/06/01/ruby-and-open-classes/
 
 
