@@ -1,28 +1,17 @@
 require 'rake'
 require 'spec/rake/spectask'
+$LOAD_PATH << './lib/ext'
+require 'Dir.rb'
 
-task :default => :last
+task :default => :all
 
 task :last do
-     last_file = get_latest_touched_file
+     last_file = Dir.latest_touched_file("test")
      sh "spec -c -f specdoc #{last_file.path}" if last_file
 end
 
-def get_latest_touched_file
-     cur_last_file = nil
-     cur_last_time = 0
-     Dir.entries("test").each {|f| 
-     
-       unless f =~ /^\.\.?/
-         file_name = "test/#{f}"
-         cur_file = File.new(file_name)
-
-         if cur_file.mtime.to_i > cur_last_time
-           cur_last_file = cur_file 
-           cur_last_time = cur_file.mtime.to_i
-         end
-       end
-     }
-
-     cur_last_file
+Spec::Rake::SpecTask.new(:all) do |t|
+  t.spec_files = FileList['test/*spec.rb']
+  t.spec_opts << '-c --format specdoc'
 end
+
